@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="musicaMenu()">
+
+<style>
+  html, body {
+    font-family: 'pixel';
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image:linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url(/img/pixel.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    gap:60px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+  }
+  .btn{
+    color:rgb(16, 16, 16);
+    background-color: rgb(250, 229, 134);
+    
+  }
+ .title{
+  text-transform: uppercase;
+  font-size: 100px;
+   -webkit-text-stroke: 1px rgb(0, 0, 0);
+  color:burlywood; rgb(0, 0, 0)
+ }
+
+ .modal-content {
+    background-color: burlywood; rgb(0, 0, 0);
+ }
+
+ .modal {
+    text-align: center;
+ }
+
+</style>
+
+
+<h1 class="title">WELCOME: {{user.nombreUsu}}</h1>
+<div class="container">
+  <div class="d-grid gap-4 col-6">
+    <a class="btn" type="button" href="/game"> <h2>PLAY</h2> </a>
+    <a class="btn" type="button" href="/game/achievements"><h2>ACHIEVEMENTS</h2></a>
+    <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#musicModal">
+      <h2>MUSIC</h2>
+    </button>
+    <a class="btn" type="button" href="/logout"><h2>LOGOUT</h2></a>
+    <p></p><p></p>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="musicModal" tabindex="-1" aria-labelledby="musicModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title col-md-10" id="musicModalLabel">MUSIC SETTINGS</h3>
+        <button type="button" class="btn-close btn-close-white p-4" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3 class="col-md-12">ON/OFF MUSIC:</h3>
+        <button class="col-md-12 justify-content-center" onClick="toggleMusicMenu()" style="background-color:transparent; border: transparent;">
+          <img id="musicIcon" src="./img/altavoz.png" alt="Icono de música activada">
+        </button>
+
+        <h3 class="col-md-12">VOLUME:</h3>
+        <input id="volumeRange" type="range" max="1" min="0" step="0.1" class="col-md-12 volumenTotal"
+          onchange="cambiarVolumen(this.value)">
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

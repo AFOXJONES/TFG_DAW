@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body onload="musicaAch()">
+
+  <style>
+    body {
+      background-image: url('/img/ach.png');
+
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .img-small {
+      max-width: 100px;
+      /* Puedes ajustar el tamaño según tus necesidades */
+    }
+
+    .card {
+      background-image: url('/img/frame.png');
+      background-size: cover;
+
+      background-repeat: no-repeat;
+      padding: 2px;
+      color: aliceblue;
+      text-align: center;
+      background-color: transparent;
+      border: transparent;
+    }
+
+    .bg-image {
+      opacity: 0.9;
+    }
+
+    .card-title {
+      color: black;
+    }
+
+    .title {
+
+      text-transform: uppercase;
+      color: rgb(0, 0, 0);
+      font-size: 100px;
+      -webkit-text-stroke: 1px rgb(255, 255, 255);
+      text-align: center;
+
+    }
+
+    .notdone {
+      font-size: 30px;
+      color: rgb(195, 0, 0);
+
+
+
+    }
+
+    .done {
+      margin-top: 42px;
+      color: green;
+    }
+
+    .espaciado {
+      margin-top: 60px;
+      text-decoration: none;
+    }
+
+    .Nope {
+      text-align: center;
+      color: brown;
+      text-size:70px;
+      margin-top: 70px;
+    }
+  </style>
+
+
+
+  {{> offcanvasAch }}
+  <div class="container">
+    <h1 class="title">{{user.nombreUsu}} ACHIEVEMENTS</h1>
+    <div class="row">
+      {{#if achievements.length}}
+      {{#each achievements}}
+      <div class="col-md-4">
+        <div class="card mb-4 bg-image">
+          <img src="/img/logro2.png" class="card-img-top img-fluid img-small mx-auto mt-4" alt="Logro 2">
+          <div class="card-body">
+            {{#ifCond this.id_achievement 1}}
+            <h2 class="card-title">¿Primera vez?</h2>
+            <p class="card-text">Juega por primera vez una partida</p>
+            {{/ifCond}}
+            {{#ifCond this.id_achievement 2}}
+            <h2 class="card-title">Principiante</h2>
+            <p class="card-text">Juega 10 partidas</p>
+            {{/ifCond}}
+            {{#ifCond this.id_achievement 3}}
+            <h2 class="card-title">Veterano</h2>
+            <p class="card-text">Juega 50 partidas</p>
+            {{/ifCond}}
+            {{#ifCond this.id_achievement 4}}
+            <h2 class="card-title">Leñador I</h2>
+            <p class="card-text">Gana con el leñador una partida</p>
+            {{/ifCond}}
+            {{#ifCond this.id_achievement 5}}
+            <h2 class="card-title">Exploradora I</h2>
+            <p class="card-text">Gana con exploradora una partida</p>
+            {{/ifCond}}
+            {{#ifCond this.id_achievement 6}}
+            <h2 class="card-title">Leñador II</h2>
+            <p class="card-text">Gana con Leñador 50 partidas</p>
+            {{/ifCond}}
+            {{#ifCond this.id_achievement 7}}
+            <h2 class="card-title">Exploradora II</h2>
+            <p class="card-text">Gana con exploradora 50 partidas</p>
+            {{/ifCond}}
+            <p>CONSEGUIDO</p>
+            <p clas="espaciado" style="color:chocolate;">.</p>
+            <p clas="espaciado" style="color:chocolate;">.</p>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+      {{else}}
+      <h1 class="Nope">No hay logros adquiridos todavía.</h1>
+      {{/if}}
+    </div>
+  </div>
+</body>
+
+</html>

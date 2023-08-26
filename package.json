@@ -1,0 +1,48 @@
+{
+  "name": "proyectofinal",
+  "version": "1.0.0",
+  "description": "Este es un readme creado desde github",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AFOXJONES/proyecto-final-DAW.gi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AFOXJONES/proyecto-final-DAW.gi/issues"
+  },
+  "homepage": "https://github.com/AFOXJONES/proyecto-final-DAW.gi#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "buffer": "^6.0.3",
+    "connect-flash": "^0.1.1",
+    "crypto-browserify": "^3.12.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "express-myconnection": "^1.0.4",
+    "express-mysql-session": "^2.0.0",
+    "express-session": "^1.17.3",
+    "express-validator": "^7.0.1",
+    "handlebars": "^4.7.7",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "stream-browserify": "^3.0.0",
+    "timeago.js": "^4.0.2",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "webpack": "^5.86.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

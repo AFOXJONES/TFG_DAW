@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style2.css">
+    <style>
+        .white-text {
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="containerPrincipal">
+        {{> message }}
+        <h1 class="white-text">SIGNUP</h1>
+        <div class="form-group">
+            <form id="login-form" action="/signup" method="POST">
+                <input placeholder="User" name="nombreUsu" type="text" class="form-control">
+                <input placeholder="Password" name="passwd" type="password" class="form-control">
+                <br>
+                <button id="btn" class="boton" type="submit">Signup</button>
+                <br>
+                <p> Already have an account?<a href="/signin">signin</a></p>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

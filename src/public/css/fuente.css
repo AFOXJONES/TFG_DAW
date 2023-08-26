@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "pixeling"; /* El nombre que quieras darle a tu fuente */
+    src: url("../fonts/Symtext.ttf"); /* Ruta relativa al archivo de la fuente */
+}
+*{
+    font-family: "pixeling";
+}
